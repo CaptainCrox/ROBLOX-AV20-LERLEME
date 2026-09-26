@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#090b12">
+    <meta name="description" content="CROX SELECTOR Roblox AV 20 etkinlik ilerleme panosu.">
+    <title>CROX SELLECTOR — ROBLOX AV 20 EVENT İLERLEME</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./config.js"></script>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="grain"></div>
+
+    <section class="welcome-screen" id="welcome-screen" aria-labelledby="welcome-title">
+      <div class="welcome-glow"></div>
+      <div class="welcome-panel">
+        <div class="brand-mark brand-mark-large"><span class="brand-glyph">C</span><span class="brand-spark">✦</span></div>
+        <p class="eyebrow">CROX SELLECTOR · ROBLOX AV 20</p>
+        <h1 id="welcome-title">Event ilerlemeniz.<br><span>Birlikte takipte.</span></h1>
+        <p class="welcome-copy">AV 20 etkinlik oyunlarını takip edin. Görevleri tamamlayın, notlarınızı ekleyin; her şey arkadaşınızla ortak güncellensin.</p>
+        <form class="welcome-form" id="welcome-form">
+          <label for="nickname">Oyuncu adın</label>
+          <input id="nickname" name="nickname" maxlength="24" minlength="2" placeholder="Örn. Crox" autocomplete="nickname" required>
+          <label for="room-code">Ortak oda kodu</label>
+          <div class="room-input-wrap">
+            <span class="room-hash">#</span>
+            <input id="room-code" name="room" maxlength="24" minlength="3" pattern="[A-Za-z0-9]{1,20}(-[A-Za-z0-9]{1,20})?" title="3-24 karakter; yalnızca İngilizce harf, sayı ve tire kullan." placeholder="CROX-AB12CD34EF56" autocomplete="off" required>
+          </div>
+          <p class="form-hint">Arkadaşın da aynı oda kodunu kullanmalı.</p>
+          <button class="primary-button welcome-submit" type="submit"><span>Event panosuna gir</span><span class="button-arrow">↗</span></button>
+        </form>
+        <div class="welcome-foot"><span class="live-dot"></span> Firebase yok · Ortak canlı kayıt</div>
+      </div>
+      <div class="welcome-orbit orbit-a"></div><div class="welcome-orbit orbit-b"></div>
+    </section>
+
+    <main class="app-shell" id="app-shell" hidden>
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="CROX SELLECTOR ana sayfa">
+          <span class="brand-mark"><span class="brand-glyph">C</span><span class="brand-spark">✦</span></span>
+          <span class="brand-word">CROX <b>SELLECTOR</b></span>
+        </a>
+        <div class="topbar-right">
+          <button class="room-pill" id="copy-room" type="button" title="Oda kodunu kopyala">
+            <span class="room-live-dot"></span><span>ODA</span><strong id="room-label">CROX-AV20</strong><span class="copy-icon">▣</span>
+          </button>
+          <button class="profile-button" id="edit-profile" type="button" aria-label="Oyuncu bilgilerini değiştir">
+            <span class="avatar" id="avatar">C</span><span id="profile-name">Crox</span><span class="chevron">⌄</span>
+          </button>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> CROX SELLECTOR · ROBLOX AV 20</p>
+          <h1>ROBLOX AV 20<br><span>EVENT İLERLEME</span></h1>
+          <p class="hero-description">Etkinlik oyunlarını ve görevlerinizi buradan takip edin. Tamamlandı olarak işaretleyin, oyun altına not bırakın; arkadaşınız anında görsün.</p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#archive"><span>Event görevlerine git</span><span class="button-arrow">↓</span></a>
+            <div class="shared-note"><span class="shared-avatars"><i id="you-avatar">C</i><i id="friend-avatar">?</i></span><span><strong id="players-count">Sadece sen</strong><small>aynı arşivde</small></span></div>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-orbit art-orbit-outer"></div><div class="art-orbit art-orbit-inner"></div>
+          <div class="art-center"><span class="art-cube">✦</span><span class="art-cube-small">C</span></div>
+          <div class="floating-chip chip-top"><span class="chip-icon">✧</span><span><b>ROBLOX AV 20</b><small><span id="hero-game-count">21</span> etkinlik oyunu</small></span></div>
+          <div class="floating-chip chip-bottom"><span class="chip-check">✓</span><span><b>Ortak ilerleme</b><small>Görevler ve notlar senkron</small></span></div>
+          <span class="art-star star-one">✳</span><span class="art-star star-two">✦</span><span class="art-star star-three">✧</span>
+        </div>
+      </section>
+
+      <section class="stats-grid" aria-label="ROBLOX AV 20 etkinlik ilerlemesi">
+        <article class="stat-card stat-total"><span class="stat-label">EVENT OYUNLARI</span><div><strong id="total-count">21</strong><span class="stat-icon">▦</span></div><small>ROBLOX AV 20 görev listesi</small></article>
+        <article class="stat-card"><span class="stat-label">TAMAMLANAN GÖREV</span><div><strong id="done-count">0</strong><span class="stat-icon icon-done">✓</span></div><small id="done-caption">İlk event göreviniz sizi bekliyor</small></article>
+        <article class="stat-card"><span class="stat-label">SIRADAKİ OYUN</span><div><strong id="remaining-count">21</strong><span class="stat-icon icon-pending">◷</span></div><small>Bir sonraki event görevini seç</small></article>
+        <article class="stat-card progress-stat"><span class="stat-label">EVENT İLERLEMESİ</span><div><strong id="progress-percent">0<span>%</span></strong><span class="progress-orb">↗</span></div><div class="progress-track"><span id="progress-fill"></span></div><small id="progress-caption">Event başlasın!</small></article>
+      </section>
+
+      <section class="archive-section" id="archive">
+        <div class="archive-heading">
+          <div><p class="eyebrow"><span class="eyebrow-line"></span> ETKİNLİK ETAPLARI</p><h2>AV 20 event görevleri<span class="heading-period">.</span></h2><p class="section-subtitle">Oyunları tamamlandı işaretle, altına ekibin için not bırak.</p></div>
+          <div class="archive-tools">
+            <label class="search-box"><span class="search-icon">⌕</span><input id="search-input" type="search" placeholder="Oyun ara..." aria-label="Oyunlarda ara"><kbd>⌘ K</kbd></label>
+            <div class="filter-tabs" role="group" aria-label="Oyunları filtrele">
+              <button class="filter-tab active" data-filter="all" type="button">Tümü <span id="all-tab-count">21</span></button>
+              <button class="filter-tab" data-filter="pending" type="button">Sırada</button>
+              <button class="filter-tab" data-filter="done" type="button">Bitti</button>
+            </div>
+          </div>
+        </div>
+        <div class="timeline" id="timeline"></div>
+        <div class="empty-state" id="empty-state" hidden><span>⌕</span><h3>Oyun bulunamadı</h3><p>Başka bir isimle aramayı dene.</p></div>
+      </section>
+      <footer class="footer"><a class="footer-brand" href="#"><span class="brand-glyph">C</span> CROX SELLECTOR</a><span>ROBLOX AV 20 event ilerlemesi <i>✦</i></span><span id="sync-status" class="sync-status"><span class="live-dot"></span> Canlı senkron aktif</span></footer>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: crox-sellector
+    runtime: node
+    region: frankfurt
+    plan: starter
+    buildCommand: npm ci --omit=dev
+    startCommand: npm start
+    healthCheckPath: /
+    disk:
+      name: crox-sellector-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_VERSION
+        value: 22.12.0
+      - key: DATA_DIR
+        value: /var/data

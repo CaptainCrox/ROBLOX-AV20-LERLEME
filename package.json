@@ -1,0 +1,12 @@
+{
+  "name": "crox-sellector",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CROX SELLECTOR Roblox AV 20 event progress board",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
